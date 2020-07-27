@@ -94,9 +94,8 @@ Summary of the results:
   - Combination: 0.57
 - Undersamplig showed the lowest recall.
 
-- Since our high_risk class has a very low precision and high recall we expect many results, but most of its predicted labels are incorrect when compared to the training labels.  
-
-- For the low_risk class the precision is very high and recall is low for undersampling and combination returning very few results, but most of its predicted labels are correct when compared to the training labels.
+- Since our high_risk class has a very low precision and high recall we expect many results, but most of its predicted labels will be incorrect when compared to the training labels.  
+- For the low_risk class the precision is very high and recall is low for undersampling and combination meaning it will return very few results, but most of its predicted labels will be correct when compared to the training labels.
 
 - Change the max_iter for the logistic regression model from 100 to 200, make the balanced_accuracy_score increases about 0.02 to 0.04 for the oversampling and undersampling algorithms, for the combination algorithm did not make any difference.  We also tried 300 but did not make any difference.
 
