@@ -25,5 +25,12 @@ Summary of the results:
 - Confusion_matrix:
   - [70, 31],
   - [6711, 10393]
+- Classification_report_imbalanced:
+  -                   pre       rec       spe        f1       geo       iba       sup
+
+  -  high_risk       0.01      0.74      0.63      0.02      0.68      0.47       101
+  -   low_risk       1.00      0.63      0.74      0.77      0.68      0.46     17104
+
+-  avg / total       0.99      0.63      0.74      0.77      0.68      0.46     17205
 
 
