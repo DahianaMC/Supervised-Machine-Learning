@@ -22,7 +22,8 @@ We were using a dataset about loan statistics.  We read the data and did some cl
 ### Naive Random Oversampling
 We resample the training data with the RandomOversampler, then we trained a logistic regression classifier using the resample data.
 Summary of the results:
-- Balanced_accuracy_score: 65%
+- Balanced_accuracy_score: 0.65 (LogisticRegression(max_iter=100)
+- Balanced_accuracy_score: 0.69 (LogisticRegression(max_iter=200)
 - Confusion_matrix:
   - [70, 31],
   - [6711, 10393]
@@ -33,10 +34,11 @@ Summary of the results:
 ### SMOTE Oversampling
 We used another oversampling model to resample the training data with SMOTE, then we trained a logistic regression classifier using the resample data.
 Summary of the results:
-- Balanced_accuracy_score: 66%
+- Balanced_accuracy_score: 0.66 (LogisticRegression(max_iter=100)
+- Balanced_accuracy_score: 0.68 (LogisticRegression(max_iter=200)
 - Confusion_matrix:
-  - [69, 32],
-  - [5974, 11130]
+  - [64, 37],
+  - [5291, 11813]
 - Classification_report_imbalanced:
 
 
@@ -44,10 +46,11 @@ Summary of the results:
 ### ClusterCentroids Resampler
 We resample the training data with the ClusterCentroids Resampler, then we trained a logistic regression classifier using the resample data.
 Summary of the results:
-- Balanced_accuracy_score: 54%
+- Balanced_accuracy_score: 0.55 (LogisticRegression(max_iter=100)
+- Balanced_accuracy_score: 0.58 (LogisticRegression(max_iter=200)
 - Confusion_matrix:
-  - [68, 33],
-  - [10004, 7100]
+  - [69, 32],
+  - [10075, 7029]
 - Classification_report_imbalanced:
 
 
@@ -56,8 +59,9 @@ Summary of the results:
 ### SMOTEENN
 We resample the training data with SMOTEEN, then we trained a logistic regression classifier using the resample data.
 Summary of the results:
-- Balanced_accuracy_score: 68%
+- Balanced_accuracy_score: 0.68 (LogisticRegression(max_iter=100)
+- Balanced_accuracy_score: 0.68 (LogisticRegression(max_iter=200)
 - Confusion_matrix:
-  - [76, 25],
-  - [6749, 10355]
+  - [79, 22],
+  - [7309, 9795]
 - Classification_report_imbalanced:
