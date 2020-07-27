@@ -15,7 +15,7 @@ In our report we will determine which model fot better our data set analyzing th
 - We used Python and jupyter notebook.  
 - File name: credit_risk_resampling.IPYNB
 
-## Analysis
+## Results
 We were using a dataset about loan statistics.  We read the data and did some cleaning, we encoded the data in columns with strings and convert to binary code using the get_dummies() method from pandas.  After the cleaning was donde we created the X_train, X_test, y_train and y_test datasets to be used in the resample.  We started with oversampling, the Naive Random and SMOTE, then undersampling using the ClusterCentroids resampler, and finally we did a combination (Over and Under) sampling using SMOTEENN.
 
 ## Oversampling
@@ -74,8 +74,30 @@ Summary of the results:
 
 - A system with high recall but low precision returns many results, but most of its predicted labels are incorrect when compared to the training labels. A system with high precision but low recall is just the opposite, returning very few results, but most of its predicted labels are correct when compared to the training labels. An ideal system with high precision and high recall will return many results, with all results labeled correctly.
 
-- The balanced accuracy in binary and multiclass classification problems to deal with imbalanced datasets. It is defined as the average of recall obtained on each class.
+- The balanced accuracy in binary and multiclass classification problems to deal with imbalanced datasets. 
 
-- Comparing the results from the oversampling, undersampling and combination, the balanced_accuracy_score for oversampling and combination was in average 0.67, while for undersampling was 0.55.
+- Comparing the results from the oversampling, undersampling and combination, the balanced_accuracy_score for oversampling and combination was in average 0.67, while for undersampling was 0.55.  The balanced_accuracy_score is a average of the recall obtained on each class.
 
 - The classification_report_imbalanced shows for all the resample models the precision of the high_risk class is 0.01 and the precision for the low_risk class is 1.0.  For the high risk_class since the precision is very low, relates to a high false positive rate.  Looking only the precision none of the models will predict the high_risk loans.
+
+- Recall values for all the resample models for the high_risk class were: 
+  - Naive Random Oversampling: 0.69
+  - SMOTE: 0.63
+  - Undersampling ClusterCentroids: 0.68
+  - Combination: 0.78
+ -Combination showed the higher recall.
+
+- Recall values for all the resample models for the low_risk class were: 
+  - Naive Random Oversampling: 0.61
+  - SMOTE: 0.69
+  - Undersampling ClusterCentroids: 0.41
+  - Combination: 0.57
+- Undersamplig showed the lowest recall.
+
+- Since our high_risk class has a very low precision and high recall we expect many results, but most of its predicted labels are incorrect when compared to the training labels.  
+
+- For the low_risk class the precision is very high and recall is low for undersampling and combination returning very few results, but most of its predicted labels are correct when compared to the training labels.
+
+- Change the max_iter for the logistic regression model from 100 to 200, make the balanced_accuracy_score increases about 0.02 to 0.04 for the oversampling and undersampling algorithms, for the combination algorithm did not make any difference.  We also tried 300 but did not make any difference.
+
+- An ideal system with high precision and high recall will return many results, with all results labeled correctly.  If we have high scores for precision and recall the classifier will return accurate results(high precision), as well as returning a majority of all positive results (high recall).  Since the precision is low for the high risk class and recall is less than 0.69 for all the models, I recommend to look other models (algorithms) that fit better the dataset that was used for training the model.  For low_risk the precision was 1, and higher recall was for Smote (0.69), but since the model does not fit the high risk class, I recommend to find another model (algorithm) that fits better both classes. 
