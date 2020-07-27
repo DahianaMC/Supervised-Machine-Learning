@@ -100,3 +100,20 @@ Summary of the results:
 - Change the max_iter for the logistic regression model from 100 to 200, make the balanced_accuracy_score increases about 0.02 to 0.04 for the oversampling and undersampling algorithms, for the combination algorithm did not make any difference.  We also tried 300 but did not make any difference.
 
 - An ideal system with high precision and high recall will return many results, with all results labeled correctly.  If we have high scores for precision and recall the classifier will return accurate results(high precision), as well as returning a majority of all positive results (high recall).  Since the precision is low for the high risk class and recall is less than 0.69 for all the models, I recommend to look other models (algorithms) that fit better the dataset that was used for training the model.  For low_risk the precision was 1, and higher recall was for Smote (0.69), but since the model does not fit the high risk class, I recommend to find another model (algorithm) that fits better both classes. 
+
+## Extension
+### Results
+
+### Balanced Random Forest Classifier
+- Balanced_accuracy_score: 0.79 (LogisticRegression(max_iter=100)
+- Confusion_matrix:
+  - [71, 30],
+  - [2153, 14951]
+- Classification_report_imbalanced:
+
+### Easy Ensemble AdaBoost Classifier
+- Balanced_accuracy_score: 0.92 (LogisticRegression(max_iter=100)
+- Confusion_matrix:
+  - [94, 7],
+  - [1706, 15398]
+- Classification_report_imbalanced:
