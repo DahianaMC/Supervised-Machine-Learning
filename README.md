@@ -13,7 +13,10 @@ In our report we will determine which model fot better our data set analyzing th
 
 ## Files
 - We used Python and jupyter notebook.  
-- File name: credit_risk_resampling.IPYNB
+- File Challange: credit_risk_resampling.IPYNB (Inside the folder Starter_Code.zip)
+- Extension Challenge: credit_risk_ensemble .IPYNB (Inside the folder Starter_Code.zip)
+- Inside the folder Starter_Code.zip is the resources folder that contains the dataset.
+
 
 ## Results
 We were using a dataset about loan statistics.  We read the data and did some cleaning, we encoded the data in columns with strings and convert to binary code using the get_dummies() method from pandas.  After the cleaning was donde we created the X_train, X_test, y_train and y_test datasets to be used in the resample.  We started with oversampling, the Naive Random and SMOTE, then undersampling using the ClusterCentroids resampler, and finally we did a combination (Over and Under) sampling using SMOTEENN.
