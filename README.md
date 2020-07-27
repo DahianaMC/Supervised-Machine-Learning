@@ -101,8 +101,8 @@ Summary of the results:
 
 - An ideal system with high precision and high recall will return many results, with all results labeled correctly.  If we have high scores for precision and recall the classifier will return accurate results(high precision), as well as returning a majority of all positive results (high recall).  Since the precision is low for the high risk class and recall is less than 0.69 for all the models, I recommend to look other models (algorithms) that fit better the dataset that was used for training the model.  For low_risk the precision was 1, and higher recall was for Smote (0.69), but since the model does not fit the high risk class, I recommend to find another model (algorithm) that fits better both classes. 
 
-## Extension
-### Results
+# Extension
+## Results
 
 ### Balanced Random Forest Classifier
 - Balanced_accuracy_score: 0.79 (LogisticRegression(max_iter=100)
@@ -110,6 +110,7 @@ Summary of the results:
   - [71, 30],
   - [2153, 14951]
 - Classification_report_imbalanced:
+  - ![Balanced Random Forest Classifier](https://github.com/DahianaMC/Supervised-Machine-Learning/blob/master/Balanced%20Random%20Forest%20Classifier.PNG)
 
 ### Easy Ensemble AdaBoost Classifier
 - Balanced_accuracy_score: 0.92 (LogisticRegression(max_iter=100)
@@ -117,3 +118,9 @@ Summary of the results:
   - [94, 7],
   - [1706, 15398]
 - Classification_report_imbalanced:
+  - ![Easy Ensemble AdaBoost Classifier](https://github.com/DahianaMC/Supervised-Machine-Learning/blob/master/Easy%20Ensemble%20AdaBoost%20Classifier.PNG)
+
+## Analysis of Results
+- The classifiers Balanced Random Forest Classifier and Easy Ensemble AdaBoost Classifier show a better fit for the dataset used for the resample models.  One big improvement is the decrease of the false positive rate.
+
+- The Balanced_accuracy_score is 0.92 for Easy Ensemble AdaBoost Classifier.  Since this model gave the best average results, I will use this model to predict results.
