@@ -23,7 +23,7 @@ We resample the training data with the RandomOversampler, then we trained a logi
 Summary of the results:
 - Balanced_accuracy_score: 65%
 - Confusion_matrix:
-[70, 31],
-[6711, 10393]
+  - [70, 31],
+  - [6711, 10393]
 
 
