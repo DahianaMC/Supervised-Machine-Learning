@@ -28,7 +28,7 @@ Summary of the results:
   - [70, 31],
   - [6711, 10393]
 - Classification_report_imbalanced:
-[Naive Random Oversampling](https://github.com/DahianaMC/Supervised-Machine-Learning/blob/master/ClusterCentroids%20resampler.PNG)
+  - [Naive Random Oversampling](https://github.com/DahianaMC/Supervised-Machine-Learning/blob/master/ClusterCentroids%20resampler.PNG)
 
 
 
