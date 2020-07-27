@@ -28,7 +28,7 @@ Summary of the results:
   - [70, 31],
   - [6711, 10393]
 - Classification_report_imbalanced:
-  - [Naive Random Oversampling](https://github.com/DahianaMC/Supervised-Machine-Learning/blob/master/ClusterCentroids%20resampler.PNG)
+  - ![Naive Random Oversampling](https://github.com/DahianaMC/Supervised-Machine-Learning/blob/master/ClusterCentroids%20resampler.PNG)
 
 
 
@@ -41,6 +41,7 @@ Summary of the results:
   - [64, 37],
   - [5291, 11813]
 - Classification_report_imbalanced:
+  - ![SMOTE Oversampling](https://github.com/DahianaMC/Supervised-Machine-Learning/blob/master/SMOTE%20Oversampling.PNG)
 
 
 ## Undersampling
@@ -53,7 +54,7 @@ Summary of the results:
   - [69, 32],
   - [10075, 7029]
 - Classification_report_imbalanced:
-
+  - ![ClusterCentroids resampler](https://github.com/DahianaMC/Supervised-Machine-Learning/blob/master/ClusterCentroids%20resampler.PNG)
 
 
 ## Combination (Over and Under) Sampling
@@ -66,6 +67,7 @@ Summary of the results:
   - [79, 22],
   - [7309, 9795]
 - Classification_report_imbalanced:
+  - ![SMOTEENN](https://github.com/DahianaMC/Supervised-Machine-Learning/blob/master/SMOTEENN.PNG)
 
 ## Analysis of Results
 - Precision-Recall is a measure of success of prediction when classes are very imbalanced, precision is a measure of result relevancy, while recall is a measure of how many truly relevant results are returned.  High precision relates to a low false positive rate, high recall relates to a low false negative rate.  If we have high scores for both show that the classifier is returning accurate results(high precision), as well as returning a majority of all positive results (high recall).
