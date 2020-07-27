@@ -16,8 +16,9 @@ In our report we will determine which model fot better our data set analyzing th
 - File name: credit_risk_resampling.IPYNB
 
 ## Analysis
-We were using a dataset about loan statistics.  We read the data and did some cleaning, we encoded the data in columns with strings and convert to binary code using the get_dummies() method from pandas.  After the cleaning was donde we created the X_train, X_test, y_train and y_test datasets to be used in the resample.  We started with oversampling, the Naive Random Oversampling.
+We were using a dataset about loan statistics.  We read the data and did some cleaning, we encoded the data in columns with strings and convert to binary code using the get_dummies() method from pandas.  After the cleaning was donde we created the X_train, X_test, y_train and y_test datasets to be used in the resample.  We started with oversampling, the Naive Random and SMOTE, then undersampling using the ClusterCentroids resampler, and finally we did a combination (Over and Under) sampling using SMOTEENN.
 
+## Oversampling
 ### Naive Random Oversampling
 We resample the training data with the RandomOversampler, then we trained a logistic regression classifier using the resample data.
 Summary of the results:
@@ -26,11 +27,37 @@ Summary of the results:
   - [70, 31],
   - [6711, 10393]
 - Classification_report_imbalanced:
-  -                   pre       rec       spe        f1       geo       iba       sup
-
-  -  high_risk       0.01      0.74      0.63      0.02      0.68      0.47       101
-  -   low_risk       1.00      0.63      0.74      0.77      0.68      0.46     17104
-
--  avg / total       0.99      0.63      0.74      0.77      0.68      0.46     17205
 
 
+
+### SMOTE Oversampling
+We used another oversampling model to resample the training data with SMOTE, then we trained a logistic regression classifier using the resample data.
+Summary of the results:
+- Balanced_accuracy_score: 66%
+- Confusion_matrix:
+  - [69, 32],
+  - [5974, 11130]
+- Classification_report_imbalanced:
+
+
+## Undersampling
+### ClusterCentroids Resampler
+We resample the training data with the ClusterCentroids Resampler, then we trained a logistic regression classifier using the resample data.
+Summary of the results:
+- Balanced_accuracy_score: 54%
+- Confusion_matrix:
+  - [68, 33],
+  - [10004, 7100]
+- Classification_report_imbalanced:
+
+
+
+## Combination (Over and Under) Sampling
+### SMOTEENN
+We resample the training data with SMOTEEN, then we trained a logistic regression classifier using the resample data.
+Summary of the results:
+- Balanced_accuracy_score: 68%
+- Confusion_matrix:
+  - [76, 25],
+  - [6749, 10355]
+- Classification_report_imbalanced:
